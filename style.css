@@ -1,0 +1,98 @@
+/* Reset basic styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: #f5f7fa;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header section */
+header {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #0078ff, #00c6ff);
+  color: white;
+}
+
+header h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 1.2em;
+  opacity: 0.9;
+}
+
+/* Intro section */
+.intro {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 20px;
+  gap: 40px;
+}
+
+.video-container video {
+  width: 350px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.description {
+  max-width: 400px;
+}
+
+.description h2 {
+  font-size: 1.8em;
+  color: #0078ff;
+  margin-bottom: 10px;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 15px;
+  background: #0078ff;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #005fcc;
+}
+
+/* Contact section */
+#contact {
+  text-align: center;
+  padding: 50px 20px;
+  background: #eaf3ff;
+}
+
+#contact a {
+  color: #0078ff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#contact a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #0078ff;
+  color: white;
+  font-size: 0.9em;
+}
