@@ -1,47 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Mykyta | English Tutor</title>
-  <link rel="stylesheet" href="style.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
 
+  <!-- GOBLIN BACKGROUND LAYER -->
+  <div class="goblin-layer"></div>
+
+  <!-- HEADER -->
   <header>
     <h1>Hi, I'm Mykyta 👋</h1>
     <p>Your friendly English tutor in France</p>
   </header>
 
+  <!-- MAIN -->
   <main>
+
     <section class="intro">
+
       <div class="video-container">
         <video controls poster="preview.jpg">
-          <source src="my-video.mp4" type="video/mp4">
-          Your browser does not support the video tag.
+          <source src="my-video.mp4" type="video/mp4" />
         </video>
       </div>
+
       <div class="description">
         <h2>About Me</h2>
         <p>
           I help French speakers improve their English through real-life conversations and fun, practical lessons.
           My goal is to make you feel confident speaking English every day.
         </p>
+
         <a href="#contact" class="btn">Book a Lesson</a>
       </div>
+
     </section>
 
     <section id="contact">
       <h2>Contact Me</h2>
       <p>Ready to start? Let’s talk!</p>
+
       <p>📧 <a href="mailto:messi_is_the_goat@gmail.com">messi_is_the_goat@gmail.com</a></p>
       <p>📱 WhatsApp: +33 3 33 33 33 33</p>
     </section>
+
   </main>
 
   <footer>
     <p>© 2025 Mykyta English Tutoring | Made with ❤️ in France</p>
   </footer>
+
+
+  <!-- GOBLIN SCRIPT -->
+  <script>
+    const goblinLayer = document.querySelector('.goblin-layer');
+    const goblinImage = "emote_goblin_boohoo.png";
+    const maxGoblins = 35;
+
+    function spawnGoblin() {
+      const goblin = document.createElement('img');
+      goblin.src = goblinImage;
+      goblin.className = 'goblin';
+      goblin.style.left = Math.random() * 100 + "vw";
+      goblin.style.animationDuration = 3 + Math.random() * 4 + "s";
+      goblinLayer.appendChild(goblin);
+
+      goblin.addEventListener("animationend", () => {
+        goblin.remove();
+      });
+    }
+
+    setInterval(spawnGoblin, 300);
+  </script>
 
 </body>
 </html>
